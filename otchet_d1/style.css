@@ -1,0 +1,9 @@
+
+table{
+   text-align: center;
+   vertical-align: middle;
+    border-collapse: collapse;
+}
+td,tr{
+    border: 1px solid black;
+}
