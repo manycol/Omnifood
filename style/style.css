@@ -1294,12 +1294,13 @@ input {
   margin-top: 6rem;
   border-top-right-radius: 1.1rem;
   border-bottom-right-radius: 1.1rem;
-  object-fit: cover; /* Сохраняет пропорции */
+  object-fit: cover; 
 }
 .sec6_right {
   margin-right: 30rem;
   margin-left: -1rem;
 }
+
 footer {
   width: 192rem;
   height: 46.7rem;
@@ -1312,6 +1313,7 @@ footer {
   border-top: 1px solid #eeeeee;
   margin-top: -20rem;
 }
+
 .info_footer {
   width: 120rem;
   height: 21.1rem;
@@ -1322,18 +1324,24 @@ footer {
   padding-left: 3.2rem;
   display: flex;
   flex-direction: row;
+  justify-content: space-between; 
 }
-.info_small{
+
+.info_small {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
-.logo_footer{
+
+.logo_footer {
   width: 21.3rem;
   height: 3rem;
   opacity: 1;
   padding-bottom: 0.2rem;
+  object-fit: contain;
 }
-.soc_seti{
+
+.soc_seti {
   width: 21.3rem;
   height: 2.8rem;
   opacity: 1;
@@ -1342,73 +1350,76 @@ footer {
   gap: 2.4rem;
   margin-top: 3rem;
 }
-.cos{
+
+.soc {
   width: 2.4rem;
   height: 2.8rem;
   opacity: 1;
+  object-fit: contain;
 }
-.text_footer{
+
+
+.text_footer {
   width: 21.3rem;
-  height: 12.6rem;
-  min-height: 6.7rem;
   opacity: 1;
-  padding-top: 5.9rem;
-  margin-top: 5rem;
-  margin-left: -15rem;
+  margin-top: 3rem; 
 }
-.t_f{
+
+.t_f {
   width: 21.3rem;
-  height: 6.8rem;
   opacity: 1;
-  font-family: Rubik;
+  font-family: 'Rubik', system-ui, -apple-system, sans-serif;
   font-weight: 400;
   font-style: Regular;
   font-size: 1.4rem;
   line-height: 2.2rem;
   letter-spacing: 0%;
   vertical-align: middle;
-  color:var(--text_footer);
+  color: var(--text-footer);
+  margin: 0; 
+  padding: 0; 
 }
-.big_t_footer{
+.big_t_footer {
   width: 21.3rem;
   height: 1.8rem;
   opacity: 1;
-  font-family: Rubik;
+  font-family: 'Rubik', system-ui, -apple-system, sans-serif;
   font-weight: 500;
   font-style: Medium;
   font-size: 2rem;
   line-height: 1.8rem;
   letter-spacing: 0%;
   vertical-align: middle;
-  margin-bottom: -4rem;
-  color:var(--gray-info);
+  color: var(--gray-info);
+  margin-bottom: 2rem; /* Изменено с -4rem */
 }
-.t_f2{
+
+.t_f2 {
   width: 21.3rem;
-  height: 5.2rem;
   opacity: 1;
-  font-family: Rubik;
+  font-family: 'Rubik', system-ui, -apple-system, sans-serif;
   font-weight: 400;
   font-style: Regular;
   font-size: 1.6rem;
   line-height: 2.56rem;
   letter-spacing: 0%;
   vertical-align: middle;
-  color:var(--gray-info);
-  margin-left: 15rem;
-  margin-bottom: 2rem;
+  color: var(--gray-info);
+  margin: 0 0 1rem 0; 
+  padding: 0;
 }
-.t_f3{
+
+.t_f3 {
   width: 21.3rem;
-  height: 5.2rem;
   opacity: 1;
-  font-family: Rubik;
+  font-family: 'Rubik', system-ui, -apple-system, sans-serif;
   font-weight: 400;
   font-style: Regular;
   font-size: 1.6rem;
   line-height: 2.56rem;
   letter-spacing: 0%;
   vertical-align: middle;
-  color:var(--gray-info);
-  margin-left: 15rem;
+  color: var(--gray-info);
+  margin: 0 0 1rem 0; 
+  padding: 0;
 }
