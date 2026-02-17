@@ -849,6 +849,8 @@ button {
   opacity: 1;
   transition: 0.4s;
   border-radius: 25%;
+   object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 .photo_sec4:hover{
   transform: scale(110%);
