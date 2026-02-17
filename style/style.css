@@ -1186,6 +1186,25 @@ button {
   padding-left: 5rem;
   padding-top: 10rem;
 }
+select {
+  width: 29.8rem;
+  height: 4.6rem;
+  border-radius: 0.9rem;
+  background-color: var(--circle-big);
+  color: var(--sec6-text);
+  border: none;
+  margin-top: 2rem;
+  box-shadow: 0rem 0.1rem 0.2rem 0rem #0000001a;
+  font-size: 1.6rem;
+  padding-left: 1.5rem;
+  font-family: Rubik;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: 2px solid var(--button-color);
+  outline-offset: 2px;
+}
 .validation {
   width: 62.9rem;
   height: 20.6rem;
