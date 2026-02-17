@@ -145,18 +145,18 @@ button {
   width: 6.4rem;
   height: 6.4rem;
   opacity: 1;
-  border-radius: 50%; /* Круглая форма */
-  object-fit: cover; /* Сохраняет пропорции, обрезая лишнее */
+  border-radius: 50%; 
+  object-fit: cover; 
 }
 
-/* Исправление для маленьких аватарок в первом экране */
+
 .avatar {
   width: 4.8rem;
   height: 4.8rem;
-  border-radius: 50%; /* Круглая форма */
+  border-radius: 50%; 
   border: 3px solid var(--border-color);
   margin-left: -2rem;
-  object-fit: cover; /* Сохраняет пропорции */
+  object-fit: cover; 
 }
 
 .text-color-orange {
@@ -184,7 +184,7 @@ button {
 .img_deliv_grid {
   width: 57rem;
   height: 56.2rem;
-  object-fit: cover; /* Сохраняет пропорции, обрезая лишнее */
+  object-fit: cover; 
   object-position: center;
 }
 .company {
@@ -209,14 +209,11 @@ button {
 }
 .logos {
   height: 3.2rem;
-  width: auto; /* Автоматическая ширина сохранит пропорции */
+  width: auto; 
   opacity: 50%;
-  object-fit: contain; /* Сохраняет пропорции */
-  filter: brightness(0); /* Делаем логотипы черно-белыми как в оригинале */
+  object-fit: contain; 
   opacity: 0.5;
 }
-
-/* Альтернативный вариант, если нужны точные размеры как в макете */
 .logos:nth-child(1) {
   max-width: 22.4rem;
   width: auto;
@@ -348,7 +345,7 @@ button {
 .phone1, .phone2, .phone3 {
   width: 18.7rem;
   height: 37.9rem;
-  object-fit: contain; /* Показывает всё изображение без обрезки */
+  object-fit: contain; 
   object-position: center;
 }
 
@@ -541,7 +538,7 @@ button {
   opacity: 1;
   border-top-left-radius: 1.1rem;
   border-top-right-radius: 1.1rem;
-  object-fit: cover; /* Сохраняет пропорции */
+  object-fit: cover; 
 }
 .characteristics {
   width: 24rem;
@@ -864,7 +861,7 @@ button {
   opacity: 1;
   transition: 0.4s;
   border-radius: 25%;
-  object-fit: cover; /* Обрезает изображение, сохраняя пропорции и заполняя контейнер */
+  object-fit: cover; 
 }
 .photo_sec4:hover{
   transform: scale(110%);
@@ -1330,7 +1327,7 @@ footer {
 .info_small {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1; 
 }
 
 .logo_footer {
@@ -1357,6 +1354,8 @@ footer {
   opacity: 1;
   object-fit: contain;
 }
+
+
 .text_footer {
   width: 21.3rem;
   opacity: 1;
@@ -1377,6 +1376,8 @@ footer {
   margin: 0; 
   padding: 0; 
 }
+
+
 .big_t_footer {
   width: 21.3rem;
   height: 1.8rem;
@@ -1389,7 +1390,7 @@ footer {
   letter-spacing: 0%;
   vertical-align: middle;
   color: var(--gray-info);
-  margin-bottom: 2rem; /* Изменено с -4rem */
+  margin-bottom: 2rem; 
 }
 
 .t_f2 {
