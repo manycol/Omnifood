@@ -141,12 +141,22 @@ button {
   height: 5.2rem;
   margin-left: 1.6rem;
 }
+.big_avatar {
+  width: 6.4rem;
+  height: 6.4rem;
+  opacity: 1;
+  border-radius: 50%; /* Круглая форма */
+  object-fit: cover; /* Сохраняет пропорции, обрезая лишнее */
+}
+
+/* Исправление для маленьких аватарок в первом экране */
 .avatar {
   width: 4.8rem;
   height: 4.8rem;
-  border-radius: 2.4rem;
+  border-radius: 50%; /* Круглая форма */
   border: 3px solid var(--border-color);
   margin-left: -2rem;
+  object-fit: cover; /* Сохраняет пропорции */
 }
 
 .text-color-orange {
@@ -174,6 +184,8 @@ button {
 .img_deliv_grid {
   width: 57rem;
   height: 56.2rem;
+  object-fit: cover; /* Сохраняет пропорции, обрезая лишнее */
+  object-position: center;
 }
 .company {
   display: flex;
@@ -195,35 +207,44 @@ button {
   height: 3.2rem;
   padding: 0 2.733rem 0 2.733rem;
 }
+.logos {
+  height: 3.2rem;
+  width: auto; /* Автоматическая ширина сохранит пропорции */
+  opacity: 50%;
+  object-fit: contain; /* Сохраняет пропорции */
+  filter: brightness(0); /* Делаем логотипы черно-белыми как в оригинале */
+  opacity: 0.5;
+}
+
+/* Альтернативный вариант, если нужны точные размеры как в макете */
 .logos:nth-child(1) {
-  width: 22.4rem;
+  max-width: 22.4rem;
+  width: auto;
   height: 3.2rem;
-  opacity: 50%;
-  scale: crop;
 }
+
 .logos:nth-child(2) {
-  width: 10rem;
+  max-width: 10rem;
+  width: auto;
   height: 3.2rem;
-  opacity: 50%;
-  scale: crop;
 }
+
 .logos:nth-child(3) {
-  width: 24.3rem;
+  max-width: 24.3rem;
+  width: auto;
   height: 3.2rem;
-  opacity: 50%;
-  scale: crop;
 }
+
 .logos:nth-child(4) {
-  width: 12.2rem;
+  max-width: 12.2rem;
+  width: auto;
   height: 3.2rem;
-  opacity: 50%;
-  scale: crop;
 }
+
 .logos:nth-child(5) {
-  width: 17.1rem;
+  max-width: 17.1rem;
+  width: auto;
   height: 3.2rem;
-  opacity: 50%;
-  scale: crop;
 }
 .info_delivery2 {
   font-family: rubik;
@@ -324,10 +345,13 @@ button {
   width: 53.6rem;
   height: 37.9rem;
 }
-.phone1 {
+.phone1, .phone2, .phone3 {
   width: 18.7rem;
   height: 37.9rem;
+  object-fit: contain; /* Показывает всё изображение без обрезки */
+  object-position: center;
 }
+
 .two_phone {
   display: flex;
   flex-direction: column;
@@ -336,18 +360,10 @@ button {
   width: 53.6rem;
   height: 37.9rem;
 }
-.phone2 {
-  width: 18.7rem;
-  height: 37.9rem;
-}
 .two {
   width: 53.6rem;
   height: 33.2rem;
   gap: 1.2rem;
-}
-.phone3 {
-  width: 18.7rem;
-  height: 37.9rem;
 }
 .thre_phone {
   display: flex;
@@ -525,6 +541,7 @@ button {
   opacity: 1;
   border-top-left-radius: 1.1rem;
   border-top-right-radius: 1.1rem;
+  object-fit: cover; /* Сохраняет пропорции */
 }
 .characteristics {
   width: 24rem;
@@ -582,10 +599,11 @@ button {
   margin-left: 3rem;
   margin-top: 1.2rem;
 }
-.sec3_icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  opacity: 1;
+.sec3_icon, .marker,  .soc {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 .bold_text_recept {
   font-family: Rubik;
@@ -684,10 +702,7 @@ button {
   color: var(--gray-info);
   list-style: none;
 }
-.marker {
-  margin-right: 2rem;
-  margin-bottom: -1rem;
-}
+
 .Gold_href {
   width: 24rem;
   height: 1.8rem;
@@ -849,6 +864,7 @@ button {
   opacity: 1;
   transition: 0.4s;
   border-radius: 25%;
+  object-fit: cover; /* Обрезает изображение, сохраняя пропорции и заполняя контейнер */
 }
 .photo_sec4:hover{
   transform: scale(110%);
@@ -1278,6 +1294,7 @@ input {
   margin-top: 6rem;
   border-top-right-radius: 1.1rem;
   border-bottom-right-radius: 1.1rem;
+  object-fit: cover; /* Сохраняет пропорции */
 }
 .sec6_right {
   margin-right: 30rem;
