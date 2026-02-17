@@ -5,7 +5,13 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>Omnifood</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
-  </head>
+<style>
+
+.header { background: #fdf2e9; height: 96px; }
+.hero { background: #fdf2e9; padding: 48px 0; }
+
+</style> 
+</head>
   <body>
     <header>
       <img class="logo" src="img/omnifood-logo.webp" alt="Логотип" />
@@ -17,6 +23,7 @@
         <button class="orange_but headname">Попробовать</button>
       </div>
     </header>
+    <main>
     <section class="healthy_food_dilevery">
       <div class="container grid_sec1">
         <div class="left_sec1">
@@ -426,33 +433,56 @@
         </div>
     </section>
     <section class="sec6">
-      <div class="firs_lanch_free">
-        <div class="sec6_left">
-        <h2 class="h2_request6">
-          Получите первый обед бесплатно!
-        </h2>
-        <p class="text_sec6">Здоровые, вкусные и простые в приготовлении блюда ждут вас. Начните питаться правильно уже сегодня. Вы можете отменить или приостановить подписку в любое время. А первый обед за наш счет!</p>
-      <div class="validation">
+  <div class="firs_lanch_free">
+    <div class="sec6_left">
+      <h2 class="h2_request6">Получите первый обед бесплатно!</h2>
+      <p class="text_sec6">Здоровые, вкусные и простые в приготовлении блюда ждут вас. Начните питаться правильно уже сегодня. Вы можете отменить или приостановить подписку в любое время. А первый обед за наш счет!</p>
+      
+      <form class="validation" action="#" method="post">
         <div class="input">
-          <p class="input_name">Ваше имя</p>
-          <input type="text">
+          <label for="name" class="input_name">Ваше имя *</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Владос Пшеничный"
+            required
+            aria-required="true"
+          >
         </div>
+        
         <div class="input">
-          <p class="input_name">Ваша почта</p>
-          <input type="text">
+          <label for="email" class="input_name">Ваша почта *</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="vlados@example.com"
+            required
+            aria-required="true"
+          >
         </div>
+        
         <div class="input">
-          <p class="input_name">Откуда вы получили от нас информацию?</p>
-          <input type="text">
+          <label for="referrer" class="input_name">Откуда вы узнали о нас?</label>
+          <select id="referrer" name="referrer">
+            <option value="">Выберите вариант</option>
+            <option value="google">Google</option>
+            <option value="friend">От друзей</option>
+            <option value="social">Социальные сети</option>
+            <option value="other">Другое</option>
+          </select>
         </div>
-        <button class="but_sec6">Отправить</button>
-        </div>
-      </div>
-      </div>
-      <div class="sec6_right">
-        <img src="img/gallery/eating.svg" alt="Первый обед бесплатно" class="eating">
-      </div>
-    </section>
+        
+        <button type="submit" class="but_sec6">Отправить</button>
+      </form>
+    </div>
+  </div>
+  <div class="sec6_right">
+    <img src="img/gallery/eating.svg" alt="Первый обед бесплатно" class="eating">
+  </div>
+</section>
+</main>
     <footer>
       <div class="info_footer">
         <div class="info_small">
