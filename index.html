@@ -4,29 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Предзагрузка критических ресурсов -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="img/omnifood-logo.webp" as="image">
+    <link rel="preload" href="img/hero.webp" as="image">
+    
+    <!-- Preconnect для шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style/style.css" />
-    <title>Omnifood - Здоровая еда каждый день</title>
-    
-    <meta name="description" content="Умная подписка на еду 365 дней в году, которая заставит вас снова питаться здорово. Подстраивается под ваши вкусы и потребности в питании.">
-
+    <!-- Критический CSS для первого экрана (минимизирует CLS) -->
     <style>
-        .header { 
-            background: #fff; 
-            height: 96px; 
+        /* Базовые стили для первого экрана */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .hero { 
-            background: #fdf2e9; 
-            padding: 48px 0; 
+        html {
+            font-size: 10px;
+            scroll-behavior: smooth;
         }
-    </style> 
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            width: 100%;
+            height: 8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4.8rem;
+            background: #fff;
+        }
+        .logo {
+            width: 16.3rem;
+            height: 2.2rem;
+            object-fit: contain;
+            aspect-ratio: 163/22;
+        }
+        .healthy_food_dilevery {
+            width: 100%;
+            background: #fdf2e9;
+            padding: 4.8rem 3.2rem 9.6rem;
+        }
+        .grid_sec1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            max-width: 130rem;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .deliver {
+            font-weight: 700;
+            font-size: 5.2rem;
+            line-height: 1.1;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .img_deliv_grid {
+            width: 100%;
+            max-width: 57rem;
+            aspect-ratio: 570/562;
+            object-fit: cover;
+        }
+        .left_sec1 {
+            max-width: 57rem;
+            min-height: 50rem;
+        }
+        .right_sec1 {
+            min-height: 50rem;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+    
+    <!-- Полный CSS файл (грузится после критического) -->
+    <link rel="stylesheet" href="style/style.css">
+    
+    <title>Omnifood - Здоровая еда каждый день</title>
+    <meta name="description" content="Умная подписка на еду 365 дней в году, которая заставит вас снова питаться здорово. Подстраивается под ваши вкусы и потребности в питании.">
 </head>
 <body>
     <header>
-        <img class="logo" src="img/omnifood-logo.webp" alt="Логотип Omnifood" width="163" height="22" loading="eager" />
+        <img class="logo" src="img/omnifood-logo.webp" alt="Логотип Omnifood" width="163" height="22" loading="eager">
         <div class="header_right">
             <a href="#" class="headname">Как это работает</a>
             <a href="#" class="headname">Рецепты</a>
@@ -48,16 +114,18 @@
                         питаться здорово. Подстраивается под ваши вкусы и потребности в
                         питании.
                     </p>
-                    <button class="orange_but sec1_but">Начать правильно питаться</button>
-                    <button class="white_but sec1_but">Подробнее ↓</button>
+                    <div class="button-group">
+                        <button class="orange_but sec1_but">Начать правильно питаться</button>
+                        <button class="white_but sec1_but">Подробнее ↓</button>
+                    </div>
                     <div class="avatar_and_text">
                         <div class="img_av">
-                            <img src="img/customers/customer-1.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="eager" />
-                            <img src="img/customers/customer-2.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="eager" />
-                            <img src="img/customers/customer-3.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="lazy" />
-                            <img src="img/customers/customer-4.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="lazy" />
-                            <img src="img/customers/customer-5.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="lazy" />
-                            <img src="img/customers/customer-6.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="lazy" />
+                            <img src="img/customers/customer-1.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="eager">
+                            <img src="img/customers/customer-2.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="eager">
+                            <img src="img/customers/customer-3.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="lazy">
+                            <img src="img/customers/customer-4.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="lazy">
+                            <img src="img/customers/customer-5.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="lazy">
+                            <img src="img/customers/customer-6.webp" alt="Аватар клиента" class="avatar" width="48" height="48" loading="lazy">
                         </div>
                         <p class="sec1_p">
                             <span class="text-color-orange">250,000+</span> доставок в прошлом году
@@ -65,7 +133,7 @@
                     </div>
                 </div>
                 <div class="right_sec1">
-                    <img alt="Фотография доставки еды" class="img_deliv_grid" src="img/hero.webp" width="570" height="562" loading="eager" />
+                    <img alt="Фотография доставки еды" class="img_deliv_grid" src="img/hero.webp" width="570" height="562" loading="eager">
                 </div>
             </div>
         </section>
@@ -73,11 +141,11 @@
         <section class="company">
             <p class="info_delivery2">нас упоминают</p>
             <div class="company_container">
-                <img src="img/logos/techcrunch.webp" alt="TechCrunch логотип" class="logos" width="224" height="32" loading="lazy" />
-                <img src="img/logos/business-insider.webp" alt="Business Insider логотип" class="logos" width="100" height="32" loading="lazy" />
-                <img src="img/logos/the-new-york-times.webp" alt="The New York Times логотип" class="logos" width="243" height="32" loading="lazy" />
-                <img src="img/logos/forbes.webp" alt="Forbes логотип" class="logos" width="122" height="32" loading="lazy" />
-                <img src="img/logos/usa-today.webp" alt="USA Today логотип" class="logos" width="171" height="32" loading="lazy" />
+                <img src="img/logos/techcrunch.webp" alt="TechCrunch логотип" class="logos" width="224" height="32" loading="lazy">
+                <img src="img/logos/business-insider.webp" alt="Business Insider логотип" class="logos" width="100" height="32" loading="lazy">
+                <img src="img/logos/the-new-york-times.webp" alt="The New York Times логотип" class="logos" width="243" height="32" loading="lazy">
+                <img src="img/logos/forbes.webp" alt="Forbes логотип" class="logos" width="122" height="32" loading="lazy">
+                <img src="img/logos/usa-today.webp" alt="USA Today логотип" class="logos" width="171" height="32" loading="lazy">
             </div>
         </section>
         
@@ -103,11 +171,11 @@
                 </div>
 
                 <div class="one_phone">
-                    <img src="img/app/1.webp" alt="Наше приложение - задачник" class="phone1" width="187" height="379" loading="lazy" />
+                    <img src="img/app/1.webp" alt="Наше приложение - задачник" class="phone1" width="187" height="379" loading="lazy">
                 </div>
 
                 <div class="two_phone">
-                    <img src="img/app/2.webp" alt="Наше приложение - советчик блюд" class="phone2" width="187" height="379" loading="lazy" />
+                    <img src="img/app/2.webp" alt="Наше приложение - советчик блюд" class="phone2" width="187" height="379" loading="lazy">
                 </div>
 
                 <div class="two">
@@ -131,7 +199,7 @@
                 </div>
                 
                 <div class="thre_phone">
-                    <img src="img/app/3.webp" alt="Наше приложение - счётчик калорий" class="phone3" width="187" height="379" loading="lazy" />
+                    <img src="img/app/3.webp" alt="Наше приложение - счётчик калорий" class="phone3" width="187" height="379" loading="lazy">
                 </div>
             </div>
         </section>
@@ -145,7 +213,7 @@
             </div>
             <div class="carts">
                 <div class="first_cart">
-                    <img src="img/meals/meal-1.webp" alt="Японские Гёдза" class="photo_sec3_1" width="336" height="224" loading="lazy" />
+                    <img src="img/meals/meal-1.webp" alt="Японские Гёдза" class="photo_sec3_1" width="336" height="224" loading="lazy">
                     <div class="text_cart_1">
                         <div class="zel">
                             <p class="green">вегетарианское</p>
@@ -153,29 +221,23 @@
                         <p class="name_recept">Японские Гёдза</p>
                         <div class="characteristics">
                             <div class="punkt_recept1">
-                                <img src="img/fire.svg" alt="Калории" class="sec3_icon" width="24" height="24" loading="lazy" />
-                                <p class="tetx_recept">
-                                    <span class="bold_text_recept">650</span> калорий
-                                </p>
+                                <img src="img/fire.svg" alt="Калории" class="sec3_icon" width="24" height="24" loading="lazy">
+                                <p class="tetx_recept"><span class="bold_text_recept">650</span> калорий</p>
                             </div>
                             <div class="punkt_recept1">
-                                <img src="img/vilka-nozh.svg" alt="NutriScore" class="sec3_icon" width="24" height="24" loading="lazy" />
-                                <p class="tetx_recept">
-                                    NutriScore ® <span class="bold_text_recept">74</span>
-                                </p>
+                                <img src="img/vilka-nozh.svg" alt="NutriScore" class="sec3_icon" width="24" height="24" loading="lazy">
+                                <p class="tetx_recept">NutriScore ® <span class="bold_text_recept">74</span></p>
                             </div>
                             <div class="punkt_recept1">
-                                <img src="img/zvezda.svg" alt="Рейтинг" class="sec3_icon" width="24" height="24" loading="lazy" />
-                                <p class="tetx_recept">
-                                    <span class="bold_text_recept">4.9</span> рейтинг (537)
-                                </p>
+                                <img src="img/zvezda.svg" alt="Рейтинг" class="sec3_icon" width="24" height="24" loading="lazy">
+                                <p class="tetx_recept"><span class="bold_text_recept">4.9</span> рейтинг (537)</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="first_cart">
-                    <img src="img/meals/meal-2.webp" alt="Салат с авокадо" class="photo_sec3_1" width="336" height="224" loading="lazy" />
+                    <img src="img/meals/meal-2.webp" alt="Салат с авокадо" class="photo_sec3_1" width="336" height="224" loading="lazy">
                     <div class="text_cart_1">
                         <div class="ovals">
                             <div class="zel2">
@@ -188,29 +250,23 @@
                         <p class="name_recept">Салат с авокадо</p>
                         <div class="characteristics">
                             <div class="punkt_recept1">
-                                <img src="img/fire.svg" alt="Калории" class="sec3_icon" width="24" height="24" loading="lazy" />
-                                <p class="tetx_recept">
-                                    <span class="bold_text_recept">400</span> калорий
-                                </p>
+                                <img src="img/fire.svg" alt="Калории" class="sec3_icon" width="24" height="24" loading="lazy">
+                                <p class="tetx_recept"><span class="bold_text_recept">400</span> калорий</p>
                             </div>
                             <div class="punkt_recept1">
-                                <img src="img/vilka-nozh.svg" alt="NutriScore" class="sec3_icon" width="24" height="24" loading="lazy" />
-                                <p class="tetx_recept">
-                                    NutriScore ® <span class="bold_text_recept">92</span>
-                                </p>
+                                <img src="img/vilka-nozh.svg" alt="NutriScore" class="sec3_icon" width="24" height="24" loading="lazy">
+                                <p class="tetx_recept">NutriScore ® <span class="bold_text_recept">92</span></p>
                             </div>
                             <div class="punkt_recept1">
-                                <img src="img/zvezda.svg" alt="Рейтинг" class="sec3_icon" width="24" height="24" loading="lazy" />
-                                <p class="tetx_recept">
-                                    <span class="bold_text_recept">4.8</span> рейтинг (441)
-                                </p>
+                                <img src="img/zvezda.svg" alt="Рейтинг" class="sec3_icon" width="24" height="24" loading="lazy">
+                                <p class="tetx_recept"><span class="bold_text_recept">4.8</span> рейтинг (441)</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="first_cart">
-                    <img src="img/gallery/gallery-12.webp" alt="Бургер" class="photo_sec3_1" width="336" height="224" loading="lazy" />
+                    <img src="img/gallery/gallery-12.webp" alt="Бургер" class="photo_sec3_1" width="336" height="224" loading="lazy">
                     <div class="text_cart_1">
                         <div class="zel2">
                             <p class="green">мясо соч</p>
@@ -218,22 +274,16 @@
                         <p class="name_recept">Бургер</p>
                         <div class="characteristics">
                             <div class="punkt_recept1">
-                                <img src="img/fire.svg" alt="Калории" class="sec3_icon" width="24" height="24" loading="lazy" />
-                                <p class="tetx_recept">
-                                    <span class="bold_text_recept">680</span> калорий
-                                </p>
+                                <img src="img/fire.svg" alt="Калории" class="sec3_icon" width="24" height="24" loading="lazy">
+                                <p class="tetx_recept"><span class="bold_text_recept">680</span> калорий</p>
                             </div>
                             <div class="punkt_recept1">
-                                <img src="img/vilka-nozh.svg" alt="NutriScore" class="sec3_icon" width="24" height="24" loading="lazy" />
-                                <p class="tetx_recept">
-                                    NutriScore ® <span class="bold_text_recept">59</span>
-                                </p>
+                                <img src="img/vilka-nozh.svg" alt="NutriScore" class="sec3_icon" width="24" height="24" loading="lazy">
+                                <p class="tetx_recept">NutriScore ® <span class="bold_text_recept">59</span></p>
                             </div>
                             <div class="punkt_recept1">
-                                <img src="img/zvezda.svg" alt="Рейтинг" class="sec3_icon" width="24" height="24" loading="lazy" />
-                                <p class="tetx_recept">
-                                    <span class="bold_text_recept">5.0</span> рейтинг (79)
-                                </p>
+                                <img src="img/zvezda.svg" alt="Рейтинг" class="sec3_icon" width="24" height="24" loading="lazy">
+                                <p class="tetx_recept"><span class="bold_text_recept">5.0</span> рейтинг (79)</p>
                             </div>
                         </div>
                     </div>
@@ -327,7 +377,7 @@
                             <li class="sec5_li"><img src="img/chekmarkerlist.webp" alt="Маркер" class="marker" width="20" height="20" loading="lazy">1 прием пищи в день</li>
                             <li class="sec5_li"><img src="img/chekmarkerlist.webp" alt="Маркер" class="marker" width="20" height="20" loading="lazy">Заказы принимаются с 11:00 до 21:00</li>
                             <li class="sec5_li"><img src="img/chekmarkerlist.webp" alt="Маркер" class="marker" width="20" height="20" loading="lazy">Доставка бесплатная</li>
-                            <li class="sec5_li"><img src="img/Img - close outline.svg" alt="Крестик" class="marker" width="20" height="20" loading="lazy"></li>
+                            <li class="sec5_li"><img src="img/Img - close outline.svg" alt="Крестик" class="marker" width="20" height="20" loading="lazy">Доступ к новейшим рецептам</li>
                         </ul>
                     </div>
                     <button class="button_sec5">Начните питаться правильно</button>
@@ -409,9 +459,9 @@
                         <button type="submit" class="but_sec6">Отправить</button>
                     </form>
                 </div>
-            </div>
-            <div class="sec6_right">
-                <img src="img/gallery/eating.svg" alt="Первый обед бесплатно" class="eating" width="388" height="584" loading="lazy">
+                <div class="sec6_right">
+                    <img src="img/gallery/eating.svg" alt="Первый обед бесплатно" class="eating" width="388" height="584" loading="lazy">
+                </div>
             </div>
         </section>
     </main>
