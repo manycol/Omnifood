@@ -4,19 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Предзагрузка критических ресурсов -->
     <link rel="preload" href="https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXw.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="img/omnifood-logo.webp" as="image">
     <link rel="preload" href="img/hero.webp" as="image">
-    
-    <!-- Preconnect для шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Критический CSS для первого экрана (минимизирует CLS) -->
     <style>
-        /* Базовые стили для первого экрана */
         * {
             margin: 0;
             padding: 0;
@@ -83,25 +76,32 @@
             align-items: center;
         }
     </style>
-    
-    <!-- Полный CSS файл (грузится после критического) -->
     <link rel="stylesheet" href="style/style.css">
-    
     <title>Omnifood - Здоровая еда каждый день</title>
     <meta name="description" content="Умная подписка на еду 365 дней в году, которая заставит вас снова питаться здорово. Подстраивается под ваши вкусы и потребности в питании.">
 </head>
 <body>
     <header>
-        <img class="logo" src="img/omnifood-logo.webp" alt="Логотип Omnifood" width="163" height="22" loading="eager">
-        <div class="header_right">
-            <a href="#" class="headname">Как это работает</a>
-            <a href="#" class="headname">Рецепты</a>
-            <a href="#" class="headname">Отзывы</a>
-            <a href="#" class="headname">Цены</a>
-            <button class="orange_but headname">Попробовать</button>
+    <img class="logo" src="img/omnifood-logo.webp" alt="Логотип Omnifood" width="163" height="22" loading="eager">
+    <div class="header_right">
+        <a href="#" class="headname">Как это работает</a>
+        <a href="#" class="headname">Рецепты</a>
+        <a href="#" class="headname">Отзывы</a>
+        <a href="#" class="headname">Цены</a>
+        <button class="orange_but headname">Попробовать</button>
+    </div>
+    <div class="burger">
+        <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+        <label for="burger-toggle" class="burger-btn">☰</label>
+        <div class="burger-menu">
+            <a href="#" class="burger-link">Как это работает</a>
+            <a href="#" class="burger-link">Рецепты</a>
+            <a href="#" class="burger-link">Отзывы</a>
+            <a href="#" class="burger-link">Цены</a>
+            <button class="burger-button">Попробовать</button>
         </div>
-    </header>
-    
+    </div>
+</header>
     <main>
         <section class="healthy_food_dilevery">
             <div class="container grid_sec1">
@@ -137,7 +137,6 @@
                 </div>
             </div>
         </section>
-        
         <section class="company">
             <p class="info_delivery2">нас упоминают</p>
             <div class="company_container">
