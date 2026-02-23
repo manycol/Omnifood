@@ -34,8 +34,6 @@
   --box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
   --transition: 0.3s ease;
 }
-
-/* Фикс для шрифтов - предзагрузка */
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
@@ -56,23 +54,17 @@ body {
   color: #333;
   overflow-x: hidden;
 }
-
-/* Общие стили для всех изображений */
 img {
   max-width: 100%;
   height: auto;
   display: block;
   aspect-ratio: attr(width) / attr(height);
 }
-
-/* Контейнеры */
 .container {
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
 }
-
-/* Шапка */
 header {
   width: 100%;
   max-width: 192rem;
@@ -154,8 +146,6 @@ button {
 .white_but:hover {
   background-color: #e0e0e0;
 }
-
-/* Секция 1 - Hero */
 .healthy_food_dilevery {
   width: 100%;
   max-width: 192rem;
@@ -261,8 +251,6 @@ button {
   aspect-ratio: 570/562;
   object-fit: cover;
 }
-
-/* Секция с логотипами */
 .company {
   width: 100%;
   max-width: 120rem;
@@ -298,10 +286,6 @@ button {
   object-fit: contain;
   aspect-ratio: attr(width) / attr(height);
 }
-
-
-
-/* Секция "Как это работает" */
 .request_text {
   width: 100%;
   max-width: 192rem;
@@ -422,8 +406,6 @@ button {
   transform: translate(-50%, -50%);
   will-change: transform;
 }
-
-/* Секция с рецептами */
 .recept {
   width: 100%;
   max-width: 192rem;
@@ -605,8 +587,6 @@ button {
 .Gold_href:hover {
   text-decoration: underline;
 }
-
-/* Секция с отзывами */
 .reviews {
   width: 100%;
   max-width: 192rem;
@@ -697,8 +677,6 @@ button {
   border-radius: 50%;
   box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 }
-
-/* Секция с ценами */
 .sec5 {
   width: 100%;
   max-width: 192rem;
@@ -877,8 +855,6 @@ button {
   line-height: 1.6;
   color: var(--gray-info);
 }
-
-/* Секция с формой */
 .sec6 {
   width: 100%;
   max-width: 192rem;
@@ -983,8 +959,6 @@ button {
   object-fit: cover;
   aspect-ratio: 388/584;
 }
-
-/* Футер */
 footer {
   width: 100%;
   max-width: 192rem;
@@ -1060,11 +1034,6 @@ footer {
 .t_f3:hover {
   color: var(--button-color);
 }
-
-/* ==================== */
-/* АДАПТИВ */
-/* ==================== */
-
 @media (max-width: 1440px) {
   html {
     font-size: 9px;
@@ -1091,7 +1060,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    /* Центрируем hero секцию */
     .grid_sec1 {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1101,7 +1069,7 @@ footer {
     .left_sec1 {
         max-width: 80rem;
         margin: 0 auto;
-        min-height: auto; /* Убираем лишнюю высоту */
+        min-height: auto; 
     }
     
     .deliver {
@@ -1114,8 +1082,6 @@ footer {
         max-width: 60rem;
         margin: 0 auto 3rem;
     }
-    
-    /* Исправляем кнопки */
     .button-group {
         gap: 2rem;
         margin: 3rem auto;
@@ -1137,8 +1103,6 @@ footer {
     .white_but {
         width: 19.1rem;
     }
-    
-    /* Аватарки по центру */
     .avatar_and_text {
         justify-content: center;
         margin-top: 3rem;
@@ -1148,8 +1112,7 @@ footer {
         max-width: 50rem;
         margin: 0 auto;
     }
-    
-    /* Секция с логотипами по центру */
+  
     .company {
         text-align: center;
     }
@@ -1157,8 +1120,6 @@ footer {
     .company_container {
         justify-content: center;
     }
-    
-    /* Секция с рецептами */
     .carts {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
@@ -1169,8 +1130,6 @@ footer {
     .first_cart {
         max-width: 100%;
     }
-    
-    /* Отзывы */
     .reviews {
         grid-template-columns: 1fr;
         gap: 5rem;
@@ -1198,8 +1157,6 @@ footer {
         max-width: 90rem;
         margin: 0 auto;
     }
-    
-    /* Цены */
     .podpiski {
         flex-direction: column;
         align-items: center;
@@ -1211,16 +1168,12 @@ footer {
         width: 100%;
         max-width: 45rem;
     }
-    
-    /* Преимущества */
     .preimushestva {
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
         max-width: 80rem;
         margin: 0 auto;
     }
-    
-    /* Форма */
     .sec6 {
         padding: 0 2rem;
     }
@@ -1247,8 +1200,6 @@ footer {
     .sec6_right {
         display: none;
     }
-    
-    /* Футер */
     .info_footer {
         gap: 4rem;
         justify-content: center;
@@ -1462,8 +1413,6 @@ footer {
     min-height: 4.8rem;
   }
 }
-
-/* Оптимизация анимаций для пользователей */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -1472,10 +1421,6 @@ footer {
     scroll-behavior: auto !important;
   }
 }
-/* ==================== */
-/* ПРОСТОЕ БУРГЕР-МЕНЮ НА ФЛЕКСАХ */
-/* ==================== */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -1485,7 +1430,7 @@ header {
 
 .burger {
     display: none;
-    margin-left: auto; /* Это прижимает бургер вправо */
+    margin-left: auto; 
 }
 
 .burger-checkbox {
@@ -1552,8 +1497,6 @@ header {
 .burger-button:hover {
     background-color: var(--primary-dark);
 }
-
-/* Адаптив */
 @media (max-width: 768px) {
     .header_right {
         display: none;
