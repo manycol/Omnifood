@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Omnifood — здоровая еда каждый день</title>
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="description" content="Умная подписка на еду 365 дней в году, которая заставит вас снова питаться здорово. Подстраивается под ваши вкусы и потребности в питании.">
+    <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' https://cdn.tailwindcss.com https://unpkg.com;">    
     <link rel="preload" href="https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXw.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="img/omnifood-logo.webp" as="image">
     <link rel="preload" href="img/hero.webp" as="image">
@@ -78,9 +85,7 @@
     </style>
     <link rel="stylesheet" href="style/style.css">
     
-    <title>Omnifood - Здоровая еда каждый день</title>
-    <meta name="description" content="Умная подписка на еду 365 дней в году, которая заставит вас снова питаться здорово. Подстраивается под ваши вкусы и потребности в питании.">
-</head>
+   </head>
 <body>
     <header>
     <img class="logo" src="img/omnifood-logo.webp" alt="Логотип Omnifood" width="163" height="22" loading="eager">
@@ -437,7 +442,7 @@
                     <form class="validation" action="#" method="post">
                         <div class="input">
                             <label for="name" class="input_name">Ваше имя *</label>
-                            <input type="text" id="name" name="name" placeholder="Владос Пшеничный" required aria-required="true">
+                            <input type="text" id="name" name="name" pattern="[A-Za-z\s\-]{2,50}" placeholder="Владос Пшеничный" required aria-required="true">
                         </div>
                         
                         <div class="input">
